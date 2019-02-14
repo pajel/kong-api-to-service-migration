@@ -10,6 +10,7 @@ APIs have been removed in Kong v1.0.x in order to upgrade from v0.14.1 you need 
 * Kong upgraded to v0.14.1 (the only version I have tested against)
 * Python 3, os and requests modules
 * Access to Kong's Admin API
+* Fresh backups of your Kong
 
 # Dry Run
 ```
@@ -23,3 +24,4 @@ export KONG_URL=http://127.0.0.1:8001 # Your Kong's admin api url and port
 export KONG_MIGRATE=True
 ./kong-migrate-apis.py
 ```
+The script actually migrates only first 1000 APIs, if you have more run the script again.
