@@ -12,6 +12,10 @@ APIs have been removed in Kong v1.0.x in order to upgrade from v0.14.1 you need 
 * Access to Kong's Admin API
 * Fresh backups of your Kong
 
+# Warning
+* The script doesn't stop on failures, it can mess up you configuration, so test first.
+* All plugins which were assigned to an API will be assigned to the new Service, if you have custom plugins which can only be used with Routes you will need to manually migrate these first.
+
 # Dry Run
 ```
 export KONG_URL=http://127.0.0.1:8001 # Your Kong's admin api url and port
